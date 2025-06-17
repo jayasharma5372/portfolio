@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaya Sharma - Frontend Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- ECharts Library for the chart container -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><span>Jaya</span> Sharma</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="theme-switcher">
+                <button id="theme-toggle" aria-label="theme-toggle" class="btn-icon">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-background-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-image-container">
+                     <img src="jaya.jpeg" alt="Jaya Sharma" class="hero-image">
+                </div>
+                <div class="hero-text">
+                    <h1>Hello, I'm <span class="highlight-name">Jaya Sharma</span></h1>
+                    <h2>Frontend Developer</h2>
+                    <p>Highly motivated and detail-oriented developer with 1+ year of experience crafting visually appealing, responsive, and user-friendly web applications. Passionate about building efficient digital experiences and constantly expanding technical expertise.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Contact Me</a>
+                        <a href="#projects" class="btn btn-secondary">View Projects</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience-section content-section">
+            <h2>Professional <span class="section-title-accent">Experience</span></h2>
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3 class="experience-role">Frontend Developer</h3>
+                    <p class="experience-duration">April 2023 – Present</p>
+                </div>
+                <p class="experience-company">Atharva System Company</p>
+                <ul class="experience-duties">
+                    <li><i class="fas fa-check-circle"></i> Developed and maintained multiple responsive web applications using HTML, CSS, JavaScript, Tailwind CSS, SCSS, and Less.</li>
+                    <li><i class="fas fa-check-circle"></i> Translated UI/UX designs from Figma and Photoshop into clean, performant front-end code.</li>
+                    <li><i class="fas fa-check-circle"></i> Leveraged Shopify and Wix to build scalable e-commerce websites with seamless user experiences.</li>
+                    <li><i class="fas fa-check-circle"></i> Collaborated with designers and backend developers to ensure feature completeness and quality.</li>
+                    <li><i class="fas fa-check-circle"></i> Optimized front-end performance through best practices like code minification and efficient asset management.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- UPDATED EDUCATION SECTION WITH PRECISE DETAILS -->
+        <section id="education" class="education-section content-section">
+            <h2>Education <span class="section-title-accent">Journey</span></h2>
+            <div class="education-chart-container">
+                <div id="education-chart" style="width: 100%; height: 400px;"></div>
+            </div>
+            <div class="education-details-grid">
+                <div class="education-item-card">
+                    <div class="education-icon-wrapper"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Master of Computer Applications (MCA)</h3>
+                    <p class="institution">Shri Chimanbhai Patel Post Graduate Institute of Computer Application, Ahmedabad</p>
+                    <p class="year">2022 – 2024</p>
+                    <p class="description">CGPA: 9.09</p>
+                </div>
+                <div class="education-item-card">
+                    <div class="education-icon-wrapper"><i class="fas fa-user-graduate"></i></div>
+                    <h3>Bachelor of Computer Applications (BCA)</h3>
+                    <p class="institution">P D Pandya Institute of Computer Applications, Ahmedabad</p>
+                    <p class="year">2019 – 2022</p>
+                    <p class="description">CGPA: 7.80</p>
+                </div>
+                <div class="education-item-card">
+                    <div class="education-icon-wrapper"><i class="fas fa-school"></i></div>
+                    <h3>Higher Secondary Certificate (HSC)</h3>
+                    <p class="institution">Gujarat Board</p>
+                    <p class="year">2019</p>
+                    <p class="description">Percentage: 65.86%</p>
+                </div>
+                <div class="education-item-card">
+                    <div class="education-icon-wrapper"><i class="fas fa-book"></i></div>
+                    <h3>Secondary School Certificate (SSC)</h3>
+                    <p class="institution">Gujarat Board</p>
+                    <p class="year">2017</p>
+                    <p class="description">Percentage: 55%</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section content-section">
+            <h2>My <span class="section-title-accent">Projects</span></h2>
+            <p class="section-subtitle">A selection of my work, showcasing skills in various technologies.</p>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="shopify">Shopify</button>
+                <button class="filter-btn" data-filter="react">React/Node</button>
+                <button class="filter-btn" data-filter="django">Django</button>
+                <button class="filter-btn" data-filter="web">Other Web</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Project Cards -->
+                <div class="project-card" data-category="web"><img src="placeholder-project.jpg" alt="Canvas Campaign"><div class="project-info"><h3>Canvas Campaign</h3><p>Web app to streamline campaign management.</p><button class="btn btn-details project-modal-trigger" data-project-id="canvas">View Details <i class="fas fa-arrow-right"></i></button></div></div>
+                <div class="project-card" data-category="react"><img src="placeholder-project.jpg" alt="Powerbox"><div class="project-info"><h3>Powerbox</h3><p>Power management platform to optimize energy use.</p><button class="btn btn-details project-modal-trigger" data-project-id="powerbox">View Details <i class="fas fa-arrow-right"></i></button></div></div>
+                <div class="project-card" data-category="shopify"><img src="placeholder-project.jpg" alt="G&J Pecks"><div class="project-info"><h3>G&J Pecks</h3><p>Shopify e-commerce site for fashion products.</p><button class="btn btn-details project-modal-trigger" data-project-id="gjpecks">View Details <i class="fas fa-arrow-right"></i></button></div></div>
+                <div class="project-card" data-category="web"><img src="placeholder-project.jpg" alt="Select Fashion"><div class="project-info"><h3>Select Fashion</h3><p>Fashion e-commerce using WooCommerce/WordPress.</p><button class="btn btn-details project-modal-trigger" data-project-id="selectfashion">View Details <i class="fas fa-arrow-right"></i></button></div></div>
+                <div class="project-card" data-category="django"><img src="placeholder-project.jpg" alt="Kiki DM"><div class="project-info"><h3>Kiki DM</h3><p>Digital marketing campaign management app.</p><button class="btn btn-details project-modal-trigger" data-project-id="kikidm">View Details <i class="fas fa-arrow-right"></i></button></div></div>
+                <div class="project-card" data-category="shopify"><img src="placeholder-project.jpg" alt="Irene’s Skin"><div class="project-info"><h3>Irene’s Skin</h3><p>Shopify-based skincare e-commerce site.</p><button class="btn btn-details project-modal-trigger" data-project-id="ireneskin">View Details <i class="fas fa-arrow-right"></i></button></div></div>
+                <div class="project-card" data-category="react"><img src="placeholder-project.jpg" alt="Top Tiers Attachment"><div class="project-info"><h3>Top Tiers Attachment</h3><p>Document sharing and collaboration app.</p><button class="btn btn-details project-modal-trigger" data-project-id="toptiers">View Details <i class="fas fa-arrow-right"></i></button></div></div>
+                <div class="project-card" data-category="django"><img src="placeholder-project.jpg" alt="Truly Culture"><div class="project-info"><h3>Truly Culture</h3><p>Web app promoting cultural awareness and education.</p><button class="btn btn-details project-modal-trigger" data-project-id="trulyculture">View Details <i class="fas fa-arrow-right"></i></button></div></div>
+                <div class="project-card" data-category="react"><img src="placeholder-project.jpg" alt="Marley"><div class="project-info"><h3>Marley</h3><p>Project management tool for task collaboration.</p><button class="btn btn-details project-modal-trigger" data-project-id="marley">View Details <i class="fas fa-arrow-right"></i></button></div></div>
+                <div class="project-card" data-category="shopify"><img src="placeholder-project.jpg" alt="AFG"><div class="project-info"><h3>AFG</h3><p>Shopify gear management site for inventory and UX.</p><button class="btn btn-details project-modal-trigger" data-project-id="afg">View Details <i class="fas fa-arrow-right"></i></button></div></div>
+            </div>
+        </section>
+        
+        <!-- Project Modals -->
+        <div id="project-modal-canvas" class="modal"><div class="modal-content"><span class="close-modal-btn">×</span><img src="placeholder-project.jpg" class="modal-img"><h3>Canvas Campaign</h3><p>A web application designed to streamline the process of managing marketing campaigns, built with foundational web technologies.</p><h4>Technologies:</h4><ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul></div></div>
+        <div id="project-modal-powerbox" class="modal"><div class="modal-content"><span class="close-modal-btn">×</span><img src="placeholder-project.jpg" class="modal-img"><h3>Powerbox</h3><p>A power management platform developed to help monitor and optimize energy consumption for businesses or homes.</p><h4>Technologies:</h4><ul><li>React</li><li>Node.js</li></ul></div></div>
+        <div id="project-modal-gjpecks" class="modal"><div class="modal-content"><span class="close-modal-btn">×</span><img src="placeholder-project.jpg" class="modal-img"><h3>G&J Pecks</h3><p>An e-commerce website built on the Shopify platform, focusing on fashion products, with customized Liquid templates for a unique user experience.</p><h4>Technologies:</h4><ul><li>Shopify</li><li>Liquid</li></ul></div></div>
+        <div id="project-modal-selectfashion" class="modal"><div class="modal-content"><span class="close-modal-btn">×</span><img src="placeholder-project.jpg" class="modal-img"><h3>Select Fashion</h3><p>A fashion-focused e-commerce platform built using the flexibility of WordPress and the power of the WooCommerce plugin.</p><h4>Technologies:</h4><ul><li>WordPress</li><li>WooCommerce</li></ul></div></div>
+        <div id="project-modal-kikidm" class="modal"><div class="modal-content"><span class="close-modal-btn">×</span><img src="placeholder-project.jpg" class="modal-img"><h3>Kiki DM</h3><p>A Django-based application for managing digital marketing campaigns, including tracking analytics and performance metrics.</p><h4>Technologies:</h4><ul><li>Django</li><li>Python</li></ul></div></div>
+        <div id="project-modal-ireneskin" class="modal"><div class="modal-content"><span class="close-modal-btn">×</span><img src="placeholder-project.jpg" class="modal-img"><h3>Irene’s Skin</h3><p>A Shopify-based e-commerce site specializing in skincare products, designed with a clean and intuitive user interface.</p><h4>Technologies:</h4><ul><li>Shopify</li><li>Liquid</li></ul></div></div>
+        <div id="project-modal-toptiers" class="modal"><div class="modal-content"><span class="close-modal-btn">×</span><img src="placeholder-project.jpg" class="modal-img"><h3>Top Tiers Attachment</h3><p>A document sharing and collaboration application built with a modern tech stack for seamless team workflows.</p><h4>Technologies:</h4><ul><li>React</li><li>Node.js</li></ul></div></div>
+        <div id="project-modal-trulyculture" class="modal"><div class="modal-content"><span class="close-modal-btn">×</span><img src="placeholder-project.jpg" class="modal-img"><h3>Truly Culture</h3><p>A Django web application dedicated to promoting cultural awareness and providing educational content.</p><h4>Technologies:</h4><ul><li>Django</li><li>Python</li></ul></div></div>
+        <div id="project-modal-marley" class="modal"><div class="modal-content"><span class="close-modal-btn">×</span><img src="placeholder-project.jpg" class="modal-img"><h3>Marley</h3><p>A project management tool designed for effective task and team collaboration, built using React and Node.js.</p><h4>Technologies:</h4><ul><li>React</li><li>Node.js</li></ul></div></div>
+        <div id="project-modal-afg" class="modal"><div class="modal-content"><span class="close-modal-btn">×</span><img src="placeholder-project.jpg" class="modal-img"><h3>AFG</h3><p>A specialized Shopify website for gear management, focusing on intuitive inventory tracking and user experience optimization.</p><h4>Technologies:</h4><ul><li>Shopify</li><li>Liquid</li></ul></div></div>
+
+        <section id="skills" class="skills-section content-section">
+            <h2>Technical <span class="section-title-accent">Skills</span></h2>
+            <div class="skills-achievements-grid">
+                <div class="skill-category-card">
+                    <div class="skill-category-header"><i class="fas fa-code"></i><h3>Frontend</h3></div>
+                    <ul class="skill-list"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Tailwind CSS</li><li>SCSS</li><li>Less</li></ul>
+                </div>
+                <div class="skill-category-card">
+                    <div class="skill-category-header"><i class="fas fa-cogs"></i><h3>Tools & Platforms</h3></div>
+                    <ul class="skill-list"><li>Figma</li><li>Adobe Photoshop</li><li>Shopify Liquid</li><li>Wix</li></ul>
+                </div>
+                <div class="skill-category-card">
+                    <div class="skill-category-header"><i class="fas fa-laptop-code"></i><h3>Programming Languages</h3></div>
+                    <ul class="skill-list"><li>Java</li><li>Python</li><li>C</li><li>C# (Basics)</li><li>Android (Java)</li></ul>
+                </div>
+                <div class="skill-category-card">
+                    <div class="skill-category-header"><i class="fas fa-database"></i><h3>Backend & Databases</h3></div>
+                    <ul class="skill-list"><li>Firebase</li><li>MySQL</li><li>SQL</li></ul>
+                </div>
+                <div class="skill-category-card">
+                    <div class="skill-category-header"><i class="fas fa-brain"></i><h3>Core Concepts</h3></div>
+                    <ul class="skill-list"><li>Data Structures & Algorithms</li><li>Operating Systems</li><li>OOP</li><li>DBMS</li><li>Software Engineering</li></ul>
+                </div>
+                 <div class="skill-category-card">
+                    <div class="skill-category-header"><i class="fas fa-handshake"></i><h3>Soft Skills</h3></div>
+                    <ul class="skill-list"><li>Problem Solving</li><li>Self-learning</li><li>Adaptability</li><li>Teamwork</li></ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="certificates" class="certificates-section content-section">
+            <h2>Certificates <span class="section-title-accent">& Workshops</span></h2>
+            <div class="certificates-carousel-container">
+                <div class="certificates-carousel">
+                    <!-- Original Set -->
+                    <div class="certificate-card"><h4>Android Development</h4><p>TOPS Technologies</p></div>
+                    <div class="certificate-card"><h4>Cyber Security</h4><p>Fundamentals Training</p></div>
+                    <div class="certificate-card"><h4>PHP Programming</h4><p>SoloLearn</p></div>
+                    <div class="certificate-card"><h4>Salesforce Workshop</h4><p>India DreamIn (2023)</p></div>
+                    <div class="certificate-card"><h4>Flutter Workshop</h4><p>Training (2023)</p></div>
+                    <div class="certificate-card"><h4>Firebase Database</h4><p>Training (2022)</p></div>
+                    <!-- Duplicate Set for smooth scrolling -->
+                    <div class="certificate-card"><h4>Android Development</h4><p>TOPS Technologies</p></div>
+                    <div class="certificate-card"><h4>Cyber Security</h4><p>Fundamentals Training</p></div>
+                    <div class="certificate-card"><h4>PHP Programming</h4><p>SoloLearn</p></div>
+                    <div class="certificate-card"><h4>Salesforce Workshop</h4><p>India DreamIn (2023)</p></div>
+                    <div class="certificate-card"><h4>Flutter Workshop</h4><p>Training (2023)</p></div>
+                    <div class="certificate-card"><h4>Firebase Database</h4><p>Training (2022)</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section content-section">
+            <h2>Get In <span class="section-title-accent">Touch</span></h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out if you're looking for a developer, have a question, or just want to connect.</p>
+                    <div class="info-item"><i class="fas fa-envelope"></i> <a href="mailto:jayasharma5372@gmail.com">jayasharma5372@gmail.com</a></div> 
+                    <div class="info-item"><i class="fas fa-phone"></i> <a href="tel:+917990766580">+91 79907 66580</a></div> 
+                    <div class="info-item"><i class="fas fa-map-marker-alt"></i> Ahmedabad, Gujarat, India</div>
+                    <div class="contact-social-links">
+                        <a href="https://www.linkedin.com/in/jaya-sharma-9954aa277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/jayasharma5372" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a> 
+                    </div>
+                </div>
+                <form id="contact-form" action="#" method="POST"> 
+                    <h3>Send a Message</h3>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="currentYear"></span> Jaya Sharma. All rights reserved.</p>
+        <p>Designed with <i class="fas fa-heart" style="color: var(--accent-color);"></i> and built with passion.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
