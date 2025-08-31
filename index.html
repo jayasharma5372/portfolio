@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaya Sharma - Frontend Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sofia': ['sofia-pro', 'sans-serif'],
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'glow': 'glow 2s ease-in-out infinite alternate',
+            'slide-up': 'slideUp 0.6s ease-out',
+            'fade-in': 'fadeIn 0.8s ease-out',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-20px)' }
+            },
+            glow: {
+              '0%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)' },
+              '100%': { boxShadow: '0 0 30px rgba(59, 130, 246, 0.8)' }
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(30px)', opacity: '0' },
+              '100%': { transform: 'translateY(0px)', opacity: '1' }
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white font-sofia overflow-x-hidden">
+  <!-- Navigation -->
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+
+  <!-- Main Interactive Banner -->
+  <section data-id="hero-section" class="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
+    <!-- Animated Background Elements -->
+    <div data-id="bg-circles" class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-float"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl animate-float" style="animation-delay: 4s;"></div>
+    </div>
+
+    <div data-id="hero-content" class="max-w-6xl mx-auto text-center relative z-10">
+      
+      
+      <h1 data-id="hero-title" class="text-5xl md:text-7xl font-bold mb-6 animate-slide-up">
+        <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          Jaya Sharma
+        </span>
+      </h1>
+      
+      <div data-id="hero-subtitle" class="text-xl md:text-2xl mb-8 animate-slide-up" style="animation-delay: 0.2s;">
+        <span class="text-gray-300">Frontend Developer</span>
+        <span class="mx-4 text-blue-400">•</span>
+        <span class="text-gray-300">Shopify Developer</span>
+        <span class="mx-4 text-purple-400">•</span>
+        <span class="text-gray-300">UI/UX Enthusiast</span>
+      </div>
+      
+      <p data-id="hero-description" class="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up" style="animation-delay: 0.4s;">
+        Crafting beautiful, interactive web experiences with modern technologies. 
+        Passionate about clean code, pixel-perfect designs, and exceptional user experiences.
+      </p>
+      
+      <div data-id="hero-cta" class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style="animation-delay: 0.6s;">
+        <a href="#projects" data-id="view-work-btn" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-full text-white font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+          <i data-lucide="eye" class="w-5 h-5 mr-2"></i>
+          View My Work
+        </a>
+        <a href="#contact" data-id="get-in-touch-btn" class="inline-flex items-center px-8 py-4 border-2 border-blue-500 hover:bg-blue-500 rounded-full text-white font-semibold transition-all duration-300 transform hover:scale-105">
+          <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+          Get In Touch
+        </a>
+      </div>
+      
+      <!-- Tech Stack Icons -->
+      <div data-id="tech-icons" class="mt-16 animate-fade-in" style="animation-delay: 0.8s;">
+        <p class="text-gray-400 mb-6">Technologies I love working with</p>
+        <div class="flex flex-wrap justify-center gap-6">
+          <div class="flex items-center space-x-2 bg-slate-800/50 px-4 py-2 rounded-full hover:bg-slate-700/50 transition-colors">
+            <i data-lucide="code" class="w-5 h-5 text-blue-400"></i>
+            <span>React</span>
+          </div>
+          <div class="flex items-center space-x-2 bg-slate-800/50 px-4 py-2 rounded-full hover:bg-slate-700/50 transition-colors">
+            <i data-lucide="palette" class="w-5 h-5 text-purple-400"></i>
+            <span>Tailwind</span>
+          </div>
+          <div class="flex items-center space-x-2 bg-slate-800/50 px-4 py-2 rounded-full hover:bg-slate-700/50 transition-colors">
+            <i data-lucide="zap" class="w-5 h-5 text-yellow-400"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="flex items-center space-x-2 bg-slate-800/50 px-4 py-2 rounded-full hover:bg-slate-700/50 transition-colors">
+            <i data-lucide="layers" class="w-5 h-5 text-green-400"></i>
+            <span>Node.js</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div data-id="scroll-indicator" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <i data-lucide="chevron-down" class="w-8 h-8 text-gray-400"></i>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section data-id="projects-section" id="projects" class="py-20 px-4 bg-slate-800/30">
+    <div class="max-w-7xl mx-auto">
+      <div data-id="projects-header" class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Featured Projects
+          </span>
+        </h2>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          A showcase of my recent work, demonstrating expertise in modern web technologies
+        </p>
+      </div>
+
+      <div data-id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div data-id="project-1" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3 text-blue-400">Nakedcashmere</h3>
+            <p class="text-gray-300 mb-4">A luxurious e-commerce platform for cashmere apparel, offering a seamless shopping experience.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+              <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">HTML/CSS</span>
+              <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">JavaScript</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://www.nakedcashmere.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div data-id="project-2" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3 text-purple-400">Suziekondi</h3>
+            <p class="text-gray-300 mb-4">An elegant online store for fashion, focusing on high-quality visuals and user-friendly navigation.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+              <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Liquid</span>
+              <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm">CSS</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://suziekondi.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div data-id="project-3" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3 text-green-400">Livetinted</h3>
+            <p class="text-gray-300 mb-4">A vibrant beauty e-commerce site, showcasing diverse products and community features.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+              <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">React</span>
+              <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">API Integration</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://www.livetinted.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div data-id="project-4" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3 text-red-400">Jetsetcandy</h3>
+            <p class="text-gray-300 mb-4">A travel-inspired jewelry brand's online presence, featuring unique designs and a global aesthetic.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+              <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">Custom Theme</span>
+              <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Marketing Integration</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://jetsetcandy.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div data-id="project-5" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3 text-orange-400">Armedforcesgear</h3>
+            <p class="text-gray-300 mb-4">Specialized e-commerce for military and patriotic merchandise, with robust product categorization.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+              <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">SEO Optimization</span>
+              <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Responsive Design</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://www.armedforcesgear.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div data-id="project-6" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3 text-yellow-400">Mezlanwarehouse</h3>
+            <p class="text-gray-300 mb-4">Warehouse-style e-commerce for luxury footwear, optimized for large inventories and smooth browsing.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify Plus</span>
+              <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm">ERP Integration</span>
+              <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Performance Opt.</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://www.mezlanwarehouse.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div data-id="project-7" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3 text-cyan-400">Ireneforteskincare</h3>
+            <p class="text-gray-300 mb-4">A sophisticated online presence for a high-end skincare brand, emphasizing natural ingredients and luxury.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+              <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">Content Strategy</span>
+              <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">Customer Reviews</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://ireneforteskincare.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div data-id="project-8" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3 text-pink-400">Ippolita</h3>
+            <p class="text-gray-300 mb-4">An exquisite jewelry e-commerce site, reflecting the brand's artistry and craftsmanship.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+              <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">Visual Merchandising</span>
+              <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Personalization</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://www.ippolita.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 9 -->
+        <div data-id="project-9" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3 text-teal-400">Eighthdayskin</h3>
+            <p class="text-gray-300 mb-4">A modern skincare website with detailed product information and a clean, minimalist design.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+              <span class="px-3 py-1 bg-teal-500/20 text-teal-400 rounded-full text-sm">Subscription Model</span>
+              <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm">User Experience</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://eighthdayskin.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 10 -->
+        <div data-id="project-10" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3 text-indigo-400">Saintspritz</h3>
+            <p class="text-gray-300 mb-4">An engaging site for a beverage brand, featuring appealing visuals and product information.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+              <span class="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-sm">Brand Storytelling</span>
+              <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Age Verification</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://saintspritz.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 11 -->
+        <div data-id="project-11" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3 text-rose-400">Alisonlou</h3>
+            <p class="text-gray-300 mb-4">A chic online boutique for fine jewelry, with a focus on customizable products and luxury branding.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+              <span class="px-3 py-1 bg-rose-500/20 text-rose-400 rounded-full text-sm">Customizer Tool</span>
+              <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">High-Res Imagery</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://www.alisonlou.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 12 -->
+        <div data-id="project-12" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3 text-gray-400">Velvet-tees</h3>
+            <p class="text-gray-300 mb-4">An online store for premium apparel, offering a minimalist design and intuitive user experience.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+              <span class="px-3 py-1 bg-gray-500/20 text-gray-400 rounded-full text-sm">Lookbook Integration</span>
+              <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Size Guides</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://velvet-tees.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+       <!-- Project 14 -->
+    <div data-id="project-14" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+      
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-3 text-fuchsia-400">Selectfashion</h3>
+        <p class="text-gray-300 mb-4">A trend-driven fashion e-commerce site, offering a wide range of clothing and accessories.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+          <span class="px-3 py-1 bg-fuchsia-500/20 text-fuchsia-400 rounded-full text-sm">Product Filters</span>
+          <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Wishlist</span>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://selectfashion.co.uk/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+            Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 15 -->
+    <div data-id="project-15" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+      
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-3 text-orange-400">Sculpey</h3>
+        <p class="text-gray-300 mb-4">The official website for a popular polymer clay brand, providing product info and creative resources.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+          <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">Recipe/Tutorials</span>
+          <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Community Features</span>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://www.sculpey.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+            Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 16 -->
+    <div data-id="project-16" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+      
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-3 text-emerald-400">Toptierattachments</h3>
+        <p class="text-gray-300 mb-4">E-commerce for heavy equipment attachments, with detailed product specifications and inquiry forms.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+          <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-sm">Custom Forms</span>
+          <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">Product Configurator</span>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://toptierattachments.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+            Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 17 -->
+    <div data-id="project-17" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+      
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-3 text-amber-400">Powerbox</h3>
+        <p class="text-gray-300 mb-4">An energy solutions e-commerce store, offering power banks and related accessories.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+          <span class="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-sm">Product Comparisons</span>
+          <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Technical Specs</span>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://efa7772f-85ae-49f1-bff7-84ac844d26b8.myshopify.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+            Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 18 -->
+    <div data-id="project-18" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+      
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-3 text-sky-400">G-J-Peck</h3>
+        <p class="text-gray-300 mb-4">A bespoke online store for a specialized product range, emphasizing heritage and quality.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+          <span class="px-3 py-1 bg-sky-500/20 text-sky-400 rounded-full text-sm">Storytelling</span>
+          <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Secure Checkout</span>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://g-j-peck.myshopify.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+            Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 19 -->
+    <div data-id="project-19" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+     
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-3 text-violet-400">Trulyculture</h3>
+        <p class="text-gray-300 mb-4">An online platform celebrating diverse cultures through products, articles, and community interaction.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Custom Build</span>
+          <span class="px-3 py-1 bg-violet-500/20 text-violet-400 rounded-full text-sm">Blog Integration</span>
+          <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm">Event Listings</span>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://trulyculture.in/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+            Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 20 -->
+    <div data-id="project-20" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+      
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-3 text-indigo-400">Marleytheme</h3>
+        <p class="text-gray-300 mb-4">A versatile Shopify theme demonstration site, showcasing various e-commerce functionalities and designs.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+          <span class="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-sm">Theme Customization</span>
+          <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Demo Store</span>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://marleytheme.myshopify.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+            Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 21 -->
+    <div data-id="project-21" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+     
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">Top Tiers</h3>
+        <p class="text-gray-300 mb-4">A leading e-commerce site for high-quality attachments and machinery parts, with advanced search.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+          <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">Advanced Filters</span>
+          <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Bulk Ordering</span>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://toptierattachments.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+            Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 22 -->
+    <div data-id="project-22" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+     
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-3 text-purple-400">Eloura Estate</h3>
+        <p class="text-gray-300 mb-4">A refined website for a luxury estate, offering insights into its offerings and experiences.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+          <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Booking Integration</span>
+          <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm">High-Quality Media</span>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://elouera-estate.myshopify.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+            Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 23 -->
+    <div data-id="project-23" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+      
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-3 text-lime-400">Earth Splendor</h3>
+        <p class="text-gray-300 mb-4">An e-commerce site focused on eco-friendly products, highlighting sustainability and natural beauty.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+          <span class="px-3 py-1 bg-lime-500/20 text-lime-400 rounded-full text-sm">Ethical Sourcing</span>
+          <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Product Storytelling</span>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://shop.earthssplendor.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+            Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 24 -->
+    <div data-id="project-24" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+      
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-3 text-gray-400">Garage</h3>
+        <p class="text-gray-300 mb-4">An online store for garage supplies and automotive accessories, providing a wide product catalog.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+          <span class="px-3 py-1 bg-gray-500/20 text-gray-400 rounded-full text-sm">Inventory Management</span>
+          <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Customer Support</span>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://mygaragesupplies.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+            Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 25 -->
+    <div data-id="project-25" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+      
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-3 text-pink-400">Select Fashion</h3>
+        <p class="text-gray-300 mb-4">A fashionable e-commerce platform offering a curated selection of clothing and accessories.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+          <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">Trend Spotting</span>
+          <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Seasonal Collections</span>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://selectfashion.co.uk/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+            Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 26 -->
+    <div data-id="project-26" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+      
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-3 text-yellow-400">Sculpy</h3>
+        <p class="text-gray-300 mb-4">An artistic e-commerce site for sculpting materials, providing inspiration and product details.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+          <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm">Creative Showcase</span>
+          <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Educational Resources</span>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://www.sculpey.com/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+            Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 27 -->
+    <div data-id="project-27" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+      
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-3 text-cyan-400">Cold&flu</h3>
+        <p class="text-gray-300 mb-4">A direct-to-consumer platform for cold and flu remedies, offering a convenient shopping experience.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+          <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">Health Information</span>
+          <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">Medical Disclaimers</span>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://www.coldandfludirect.com.au/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+            Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 28 -->
+    <div data-id="project-28" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+      
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-3 text-purple-400">By Johnny</h3>
+        <p class="text-gray-300 mb-4">A fashion-forward e-commerce site for contemporary women's wear, highlighting unique designs.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Shopify</span>
+          <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">New Arrivals</span>
+          <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm">Size Guide</span>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://byjohnny.com.au/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+            Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 29 -->
+    <div data-id="project-29" class="group bg-slate-800/50 rounded-2xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+      
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-3 text-red-400">The Service Club</h3>
+        <p class="text-gray-300 mb-4">A premium service provider's website, detailing offerings and facilitating client bookings.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Custom Build</span>
+          <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">Booking System</span>
+          <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Testimonials</span>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://www.theserviceclub.com.au/" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+            Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-12">
+  <button id="show-more-projects-btn" class="group bg-slate-800/50 rounded-2xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl border border-transparent ">
+    <div class="w-16 h-16 mx-auto mb-4 bg-blue-500/20 rounded-full flex items-center justify-center group-hover:bg-blue-500/30 transition-colors">
+      <i data-lucide="plus" class="w-8 h-8 text-blue-400 group-hover:text-white transition-colors"></i>
+    </div>
+    <h3 class="text-xl font-bold mb-2 text-blue-400 group-hover:text-white transition-colors">Show More Projects</h3>
+    <p class="text-gray-300 text-sm mb-3 group-hover:text-gray-200 transition-colors">Discover more of my work</p>
+  </button>
+</div>
+</div>
+</div>
+</section>
+
+  <!-- Certificates and Badges Section -->
+  <section data-id="certificates-section" id="certificates" class="py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div data-id="certificates-header" class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Certificates & Badges
+          </span>
+        </h2>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          Continuous learning and professional development achievements
+        </p>
+      </div>
+
+      <div data-id="certificates-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Certificate 1 -->
+        <div data-id="cert-1" class="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 border border-blue-500/30">
+          <div class="w-16 h-16 mx-auto mb-4 bg-blue-500/20 rounded-full flex items-center justify-center">
+            <i data-lucide="award" class="w-8 h-8 text-blue-400"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2 text-blue-400">React Developer</h3>
+          <p class="text-gray-300 text-sm mb-3">Meta (Facebook)</p>
+          <div class="text-xs text-gray-400 mb-4">Professional Certificate</div>
+          <div class="flex justify-center">
+            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs">Verified</span>
+          </div>
+        </div>
+
+        <!-- Certificate 2 -->
+        <div data-id="cert-2" class="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 border border-purple-500/30">
+          <div class="w-16 h-16 mx-auto mb-4 bg-purple-500/20 rounded-full flex items-center justify-center">
+            <i data-lucide="code" class="w-8 h-8 text-purple-400"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2 text-purple-400">JavaScript Expert</h3>
+          <p class="text-gray-300 text-sm mb-3">Google</p>
+          <div class="text-xs text-gray-400 mb-4">Associate Certification</div>
+          <div class="flex justify-center">
+            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs">Verified</span>
+          </div>
+        </div>
+
+        <!-- Certificate 3 -->
+        <div data-id="cert-3" class="bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-2xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 border border-green-500/30">
+          <div class="w-16 h-16 mx-auto mb-4 bg-green-500/20 rounded-full flex items-center justify-center">
+            <i data-lucide="layers" class="w-8 h-8 text-green-400"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2 text-green-400">Full Stack Web</h3>
+          <p class="text-gray-300 text-sm mb-3">freeCodeCamp</p>
+          <div class="text-xs text-gray-400 mb-4">300+ Hours</div>
+          <div class="flex justify-center">
+            <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs">Verified</span>
+          </div>
+        </div>
+
+        <!-- Certificate 4 -->
+        <div data-id="cert-4" class="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-2xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 border border-orange-500/30">
+          <div class="w-16 h-16 mx-auto mb-4 bg-orange-500/20 rounded-full flex items-center justify-center">
+            <i data-lucide="palette" class="w-8 h-8 text-orange-400"></i>
+          </div>
+          <h3 class="text-lg font-bold mb-2 text-orange-400">UX Design</h3>
+          <p class="text-gray-300 text-sm mb-3">Adobe</p>
+          <div class="text-xs text-gray-400 mb-4">Certified Professional</div>
+          <div class="flex justify-center">
+            <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs">Verified</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills Section -->
+      <div data-id="skills-section" class="mt-20">
+        <h3 class="text-3xl font-bold text-center mb-12">
+          <span class="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+            Core Skills
+          </span>
+        </h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div data-id="frontend-skills" class="bg-slate-800/30 rounded-2xl p-6">
+            <h4 class="text-xl font-bold mb-4 text-blue-400">Frontend</h4>
+            <div class="space-y-3">
+              <div class="flex justify-between items-center">
+                <span>React/Next.js</span>
+                <div class="w-24 bg-gray-700 rounded-full h-2">
+                  <div class="bg-blue-400 h-2 rounded-full" style="width: 95%"></div>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <span>JavaScript/TypeScript</span>
+                <div class="w-24 bg-gray-700 rounded-full h-2">
+                  <div class="bg-blue-400 h-2 rounded-full" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <span>Tailwind/CSS</span>
+                <div class="w-24 bg-gray-700 rounded-full h-2">
+                  <div class="bg-blue-400 h-2 rounded-full" style="width: 88%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div data-id="backend-skills" class="bg-slate-800/30 rounded-2xl p-6">
+            <h4 class="text-xl font-bold mb-4 text-green-400">Backend</h4>
+            <div class="space-y-3">
+              <div class="flex justify-between items-center">
+                <span>Node.js/Express</span>
+                <div class="w-24 bg-gray-700 rounded-full h-2">
+                  <div class="bg-green-400 h-2 rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <span>MongoDB/SQL</span>
+                <div class="w-24 bg-gray-700 rounded-full h-2">
+                  <div class="bg-green-400 h-2 rounded-full" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <span>REST APIs</span>
+                <div class="w-24 bg-gray-700 rounded-full h-2">
+                  <div class="bg-green-400 h-2 rounded-full" style="width: 82%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div data-id="tools-skills" class="bg-slate-800/30 rounded-2xl p-6">
+            <h4 class="text-xl font-bold mb-4 text-purple-400">Tools & Others</h4>
+            <div class="space-y-3">
+              <div class="flex justify-between items-center">
+                <span>Git/GitHub</span>
+                <div class="w-24 bg-gray-700 rounded-full h-2">
+                  <div class="bg-purple-400 h-2 rounded-full" style="width: 92%"></div>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <span>Docker/AWS</span>
+                <div class="w-24 bg-gray-700 rounded-full h-2">
+                  <div class="bg-purple-400 h-2 rounded-full" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <span>Figma/Design</span>
+                <div class="w-24 bg-gray-700 rounded-full h-2">
+                  <div class="bg-purple-400 h-2 rounded-full" style="width: 78%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section data-id="contact-section" id="contact" class="py-20 px-4 bg-slate-800/30">
+    <div class="max-w-4xl mx-auto">
+      <div data-id="contact-header" class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          <span class="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+            Let's Work Together
+          </span>
+        </h2>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+          Have a project in mind? I'd love to hear about it. Let's create something amazing together.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Contact Info -->
+        <div data-id="contact-info">
+          <h3 class="text-2xl font-bold mb-8 text-blue-400">Get In Touch</h3>
+          <div class="space-y-6">
+            <div data-id="contact-email" class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
+                <i data-lucide="mail" class="w-6 h-6 text-blue-400"></i>
+              </div>
+              <div>
+                <p class="font-semibold">Email</p>
+                <a href="mailto:jayasharma5372@gmail.com" class="text-gray-300 hover:text-blue-400 transition-colors">jayasharma5372@gmail.com</a>
+              </div>
+            </div>
+            
+            <div data-id="contact-phone" class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
+                <i data-lucide="phone" class="w-6 h-6 text-green-400"></i>
+              </div>
+              <div>
+                <p class="font-semibold">Phone</p>
+                <a href="tel:+91 7990766580" class="text-gray-300 hover:text-green-400 transition-colors">+91 7990766580</a>
+              </div>
+            </div>
+            
+            <div data-id="contact-location" class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
+                <i data-lucide="map-pin" class="w-6 h-6 text-purple-400"></i>
+              </div>
+              <div>
+                <p class="font-semibold">Location</p>
+                <p class="text-gray-300">Ahmedabad, Gujarat</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div data-id="social-links" class="mt-12">
+            <h4 class="text-lg font-semibold mb-4">Follow Me</h4>
+            <div class="flex space-x-4">
+              <a href="#" class="w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center hover:bg-blue-500/30 transition-colors">
+                <i data-lucide="linkedin" class="w-5 h-5 text-blue-400"></i>
+              </a>
+              <a href="#" class="w-10 h-10 bg-gray-700/50 rounded-full flex items-center justify-center hover:bg-gray-600/50 transition-colors">
+                <i data-lucide="github" class="w-5 h-5 text-gray-300"></i>
+              </a>
+              <a href="#" class="w-10 h-10 bg-blue-400/20 rounded-full flex items-center justify-center hover:bg-blue-400/30 transition-colors">
+                <i data-lucide="twitter" class="w-5 h-5 text-blue-400"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div data-id="contact-form-container" class="bg-slate-800/50 rounded-2xl p-8">
+          <form data-id="contact-form" class="space-y-6">
+            <div data-id="form-name-group">
+              <label for="name" class="block text-sm font-medium mb-2">Full Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required
+                data-id="name-input"
+                class="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                placeholder="Your full name"
+              >
+            </div>
+            
+            <div data-id="form-email-group">
+              <label for="email" class="block text-sm font-medium mb-2">Email Address</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required
+                data-id="email-input"
+                class="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                placeholder="your@email.com"
+              >
+            </div>
+            
+            <div data-id="form-subject-group">
+              <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+              <input 
+                type="text" 
+                id="subject" 
+                name="subject" 
+                required
+                data-id="subject-input"
+                class="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300"
+                placeholder="Project inquiry"
+              >
+            </div>
+            
+            <div data-id="form-message-group">
+              <label for="message" class="block text-sm font-medium mb-2">Message</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="5" 
+                required
+                data-id="message-input"
+                class="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300 resize-none"
+                placeholder="Tell me about your project..."
+              ></textarea>
+            </div>
+            
+            <button 
+              type="submit" 
+              data-id="submit-btn"
+              class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 py-4 px-6 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-800"
+            >
+              <span data-id="btn-text">Send Message</span>
+              <i data-lucide="send" class="w-5 h-5 ml-2 inline-block"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container" data-source="components/footer.html"></div>
+
+  <!-- Wowdev.ai Badge -->
+  <div id="badge-container" data-source="components/badge.html"></div>
+
+  <!-- Scripts -->
+  <script type="module">
+    import { loadComponent } from './scripts/components/loader.js';
+    import { initContactForm } from './scripts/contact-form.js';
+    import { initScrollAnimations } from './scripts/animations.js';
+    import { initProjectVisibility } from './scripts/project-visibility.js';
+
+    // Load all shared components
+    loadComponent('#navbar-container');
+    loadComponent('#footer-container');
+    loadComponent('#badge-container');
+
+    // Initialize features
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize icons
+      lucide.createIcons();
+      
+      // Initialize contact form
+      initContactForm();
+      
+      // Initialize scroll animations
+      initScrollAnimations();
+      
+       // Initialize project visibility (new!)
+      initProjectVisibility();
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
