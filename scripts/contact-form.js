@@ -7,14 +7,14 @@ export function initContactForm() {
     if (!form) return;
 
     form.addEventListener('submit', async (e) => {
-        e.preventDefault(); // Prevent page reload
+        e.preventDefault(); // Stop the page from reloading
         
-        // UI State: Loading
+        // Show "Sending" state
         btn.disabled = true;
         btnText.innerText = "Sending...";
         status.classList.remove('hidden', 'bg-red-500/20', 'text-red-400', 'bg-green-500/20', 'text-green-400');
         status.classList.add('bg-blue-500/10', 'text-blue-400', 'block');
-        status.innerText = "Processing your message...";
+        status.innerText = "Sending your message...";
 
         const formData = new FormData(form);
 
@@ -28,18 +28,17 @@ export function initContactForm() {
             });
 
             if (response.ok) {
-                // UI State: Success
+                // Success
                 status.classList.replace('text-blue-400', 'text-green-400');
                 status.classList.replace('bg-blue-500/10', 'bg-green-500/20');
-                status.innerText = "Success! I'll get back to you shortly.";
+                status.innerText = "Success! I will get back to you shortly.";
                 btnText.innerText = "Message Sent!";
-                form.reset(); // Clear the form
+                form.reset(); 
             } else {
-                const data = await response.json();
-                throw new Error(data.error || "Submission failed");
+                throw new Error();
             }
         } catch (error) {
-            // UI State: Error
+            // Error
             status.classList.replace('text-blue-400', 'text-red-400');
             status.classList.replace('bg-blue-500/10', 'bg-red-500/20');
             status.innerText = "Oops! There was a problem. Please try again.";
