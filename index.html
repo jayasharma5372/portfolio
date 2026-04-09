@@ -1,49 +1,270 @@
-export function initContactForm() {
-    const form = document.getElementById('contact-form');
-    const btn = document.getElementById('submit-btn');
-    const btnText = document.getElementById('btn-text');
-    const status = document.getElementById('form-status');
-
-    if (!form) return;
-
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault(); // Stop the page from reloading
-        
-        // Show "Sending" state
-        btn.disabled = true;
-        btnText.innerText = "Sending...";
-        status.classList.remove('hidden', 'bg-red-500/20', 'text-red-400', 'bg-green-500/20', 'text-green-400');
-        status.classList.add('bg-blue-500/10', 'text-blue-400', 'block');
-        status.innerText = "Sending your message...";
-
-        const formData = new FormData(form);
-
-        try {
-            const response = await fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-
-            if (response.ok) {
-                // Success
-                status.classList.replace('text-blue-400', 'text-green-400');
-                status.classList.replace('bg-blue-500/10', 'bg-green-500/20');
-                status.innerText = "Success! I will get back to you shortly.";
-                btnText.innerText = "Message Sent!";
-                form.reset(); 
-            } else {
-                throw new Error();
-            }
-        } catch (error) {
-            // Error
-            status.classList.replace('text-blue-400', 'text-red-400');
-            status.classList.replace('bg-blue-500/10', 'bg-red-500/20');
-            status.innerText = "Oops! There was a problem. Please try again.";
-            btnText.innerText = "Try Again";
-            btn.disabled = false;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaya Sharma | Senior Frontend & Shopify Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { 'sofia': ['sofia-pro', 'sans-serif'] },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'slide-up': 'slideUp 0.6s ease-out',
+            'fade-in': 'fadeIn 0.8s ease-out',
+          },
+          keyframes: {
+            float: { '0%, 100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-20px)' } },
+            slideUp: { '0%': { transform: 'translateY(30px)', opacity: '0' }, '100%': { transform: 'translateY(0px)', opacity: '1' } },
+            fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } }
+          }
         }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white font-sofia overflow-x-hidden">
+  
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden opacity-30">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto text-center relative z-10">
+      <h1 class="text-5xl md:text-8xl font-bold mb-6 animate-slide-up">
+        <span class="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">Jaya Sharma</span>
+      </h1>
+      
+      <div class="text-xl md:text-3xl mb-8 font-light tracking-wide animate-slide-up" style="animation-delay: 0.2s;">
+        Shopify Expert <span class="text-blue-400 mx-2">•</span> Frontend Architect <span class="text-purple-400 mx-2">•</span> UI/UX Designer
+      </div>
+      
+      <p class="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up" style="animation-delay: 0.4s;">
+        Specializing in high-conversion Shopify stores and pixel-perfect frontend experiences for global luxury brands.
+      </p>
+      
+      <div class="flex flex-wrap gap-4 justify-center animate-slide-up" style="animation-delay: 0.6s;">
+        <a href="#projects" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg flex items-center">
+            <i data-lucide="layout" class="mr-2"></i> Explore Work
+        </a>
+        <a href="#contact" class="px-8 py-4 border-2 border-white/20 hover:bg-white/10 rounded-full font-bold transition-all flex items-center">
+            <i data-lucide="send" class="mr-2"></i> Let's Talk
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-24 px-4 bg-slate-900/50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-6xl font-bold mb-4">Featured Portfolio</h2>
+        <p class="text-gray-400 text-xl">A selection of premium e-commerce builds and custom web applications.</p>
+      </div>
+
+      <div id="projects-grid" data-id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Cards -->
+        <div data-id="project-1" class="group bg-slate-800/40 border border-white/10 p-6 rounded-3xl hover:border-blue-500/50 transition-all">
+          <h3 class="text-2xl font-bold text-blue-400 mb-2">Suzie Kondi</h3>
+          <p class="text-gray-400 mb-4">Luxury fashion boutique featuring custom Liquid sections and seamless UX.</p>
+          <div class="flex flex-wrap gap-2 mb-6"><span class="bg-blue-500/10 text-blue-300 px-3 py-1 rounded-full text-xs">Shopify Plus</span></div>
+          <a href="https://suziekondi.com/" target="_blank" class="flex items-center text-white font-semibold hover:text-blue-400">View Site <i data-lucide="external-link" class="ml-2 w-4"></i></a>
+        </div>
+
+        <div data-id="project-2" class="group bg-slate-800/40 border border-white/10 p-6 rounded-3xl hover:border-purple-500/50 transition-all">
+          <h3 class="text-2xl font-bold text-purple-400 mb-2">Hatch Collection</h3>
+          <p class="text-gray-400 mb-4">Premium maternity wear with complex product filtering and high-res visuals.</p>
+          <div class="flex flex-wrap gap-2 mb-6"><span class="bg-purple-500/10 text-purple-300 px-3 py-1 rounded-full text-xs">Custom Frontend</span></div>
+          <a href="https://www.hatchcollection.com/" target="_blank" class="flex items-center text-white font-semibold hover:text-purple-400">View Site <i data-lucide="external-link" class="ml-2 w-4"></i></a>
+        </div>
+
+        <div data-id="project-3" class="group bg-slate-800/40 border border-white/10 p-6 rounded-3xl hover:border-cyan-500/50 transition-all">
+            <h3 class="text-2xl font-bold text-cyan-400 mb-2">Jet Set Candy</h3>
+            <p class="text-gray-400 mb-4">Travel-inspired jewelry store with custom gift-wrapping logic.</p>
+            <div class="flex flex-wrap gap-2 mb-6"><span class="bg-cyan-500/10 text-cyan-300 px-3 py-1 rounded-full text-xs">UI/UX</span></div>
+            <a href="https://jetsetcandy.com/" target="_blank" class="flex items-center text-white font-semibold hover:text-cyan-400">View Site <i data-lucide="external-link" class="ml-2 w-4"></i></a>
+        </div>
+
+        <div data-id="project-4" class="group bg-slate-800/40 border border-white/10 p-6 rounded-3xl hover:border-red-500/50 transition-all">
+            <h3 class="text-2xl font-bold text-red-400 mb-2">Leset</h3>
+            <p class="text-gray-400 mb-4">Minimalist fashion store focused on performance optimization.</p>
+            <div class="flex flex-wrap gap-2 mb-6"><span class="bg-red-500/10 text-red-300 px-3 py-1 rounded-full text-xs">Performance</span></div>
+            <a href="https://leset.com/" target="_blank" class="flex items-center text-white font-semibold hover:text-red-400">View Site <i data-lucide="external-link" class="ml-2 w-4"></i></a>
+        </div>
+
+        <div data-id="project-5" class="group bg-slate-800/40 border border-white/10 p-6 rounded-3xl hover:border-green-500/50 transition-all">
+            <h3 class="text-2xl font-bold text-green-400 mb-2">Irene Forte</h3>
+            <p class="text-gray-400 mb-4">High-end skincare with custom subscription model integration.</p>
+            <div class="flex flex-wrap gap-2 mb-6"><span class="bg-green-500/10 text-green-300 px-3 py-1 rounded-full text-xs">Shopify</span></div>
+            <a href="https://ireneforteskincare.com/" target="_blank" class="flex items-center text-white font-semibold hover:text-green-400">View Site <i data-lucide="external-link" class="ml-2 w-4"></i></a>
+        </div>
+
+        <div data-id="project-6" class="group bg-slate-800/40 border border-white/10 p-6 rounded-3xl hover:border-orange-500/50 transition-all">
+            <h3 class="text-2xl font-bold text-orange-400 mb-2">Live Tinted</h3>
+            <p class="text-gray-400 mb-4">Inclusive beauty brand with advanced community features.</p>
+            <div class="flex flex-wrap gap-2 mb-6"><span class="bg-orange-500/10 text-orange-300 px-3 py-1 rounded-full text-xs">E-Commerce</span></div>
+            <a href="https://www.livetinted.com/" target="_blank" class="flex items-center text-white font-semibold hover:text-orange-400">View Site <i data-lucide="external-link" class="ml-2 w-4"></i></a>
+        </div>
+
+        <!-- Hidden Projects -->
+        <div data-id="project-7" class="hidden group bg-slate-800/40 border border-white/10 p-6 rounded-3xl">
+            <h3 class="text-2xl font-bold text-yellow-400 mb-2">Mezlan</h3>
+            <a href="https://www.mezlan.com/" target="_blank" class="text-white hover:text-yellow-400">View Site</a>
+        </div>
+        <div data-id="project-8" class="hidden group bg-slate-800/40 border border-white/10 p-6 rounded-3xl">
+            <h3 class="text-2xl font-bold text-pink-400 mb-2">Naked Cashmere</h3>
+            <a href="https://www.nakedcashmere.com/" target="_blank" class="text-white hover:text-pink-400">View Site</a>
+        </div>
+        <div data-id="project-9" class="hidden group bg-slate-800/40 border border-white/10 p-6 rounded-3xl">
+            <h3 class="text-2xl font-bold text-indigo-400 mb-2">Eighth Day Skin</h3>
+            <a href="https://eighthdayskin.com/" target="_blank" class="text-white hover:text-indigo-400">View Site</a>
+        </div>
+        <div data-id="project-10" class="hidden group bg-slate-800/40 border border-white/10 p-6 rounded-3xl">
+            <h3 class="text-2xl font-bold text-sky-400 mb-2">Saint Spritz</h3>
+            <a href="https://saintspritz.com/" target="_blank" class="text-white hover:text-sky-400">View Site</a>
+        </div>
+        <div data-id="project-11" class="hidden group bg-slate-800/40 border border-white/10 p-6 rounded-3xl">
+            <h3 class="text-2xl font-bold text-emerald-400 mb-2">Ippolita</h3>
+            <a href="https://www.ippolita.com/" target="_blank" class="text-white hover:text-emerald-400">View Site</a>
+        </div>
+        <div data-id="project-12" class="hidden group bg-slate-800/40 border border-white/10 p-6 rounded-3xl">
+            <h3 class="text-2xl font-bold text-slate-300 mb-2">Velvet</h3>
+            <a href="https://velvet-tees.com/" target="_blank" class="text-white hover:text-slate-300">View Site</a>
+        </div>
+        <div data-id="project-13" class="hidden group bg-slate-800/40 border border-white/10 p-6 rounded-3xl">
+            <h3 class="text-2xl font-bold text-orange-400 mb-2">Wagwell</h3>
+            <a href="https://wagwellpet.com/" target="_blank" class="text-white hover:text-orange-400">View Site</a>
+        </div>
+        <div data-id="project-14" class="hidden group bg-slate-800/40 border border-white/10 p-6 rounded-3xl">
+            <h3 class="text-2xl font-bold text-rose-400 mb-2">Alison Lou</h3>
+            <a href="https://www.alisonlou.com/" target="_blank" class="text-white hover:text-rose-400">View Site</a>
+        </div>
+        <div data-id="project-15" class="hidden group bg-slate-800/40 border border-white/10 p-6 rounded-3xl">
+            <h3 class="text-2xl font-bold text-violet-400 mb-2">Kiki DM</h3>
+            <a href="https://kikidm.com/" target="_blank" class="text-white hover:text-violet-400">View Site</a>
+        </div>
+        <div data-id="project-16" class="hidden group bg-slate-800/40 border border-white/10 p-6 rounded-3xl">
+            <h3 class="text-2xl font-bold text-blue-400 mb-2">Service Club</h3>
+            <a href="https://www.theserviceclub.com.au/" target="_blank" class="text-white hover:text-blue-400">View Site</a>
+        </div>
+        <div data-id="project-17" class="hidden group bg-slate-800/40 border border-white/10 p-6 rounded-3xl">
+            <h3 class="text-2xl font-bold text-orange-400 mb-2">Sculpey</h3>
+            <a href="https://www.sculpey.com/" target="_blank" class="text-white hover:text-orange-400">View Site</a>
+        </div>
+        <div data-id="project-18" class="hidden group bg-slate-800/40 border border-white/10 p-6 rounded-3xl">
+            <h3 class="text-2xl font-bold text-yellow-400 mb-2">Powerbox</h3>
+            <a href="https://www.powerbox.com.au/" target="_blank" class="text-white hover:text-yellow-400">View Site</a>
+        </div>
+        <div data-id="project-19" class="hidden group bg-slate-800/40 border border-white/10 p-6 rounded-3xl">
+            <h3 class="text-2xl font-bold text-fuchsia-400 mb-2">By Johnny</h3>
+            <a href="https://byjohnny.com.au/" target="_blank" class="text-white hover:text-fuchsia-400">View Site</a>
+        </div>
+        <div data-id="project-20" class="hidden group bg-slate-800/40 border border-white/10 p-6 rounded-3xl">
+            <h3 class="text-2xl font-bold text-cyan-400 mb-2">Eloura Estate</h3>
+            <a href="https://eloueraestate.com/" target="_blank" class="text-white hover:text-cyan-400">View Site</a>
+        </div>
+        <div data-id="project-21" class="hidden group bg-slate-800/40 border border-white/10 p-6 rounded-3xl">
+            <h3 class="text-2xl font-bold text-lime-400 mb-2">Earth Splendor</h3>
+            <a href="https://earthssplendor.com/" target="_blank" class="text-white hover:text-lime-400">View Site</a>
+        </div>
+        <div data-id="project-22" class="hidden group bg-slate-800/40 border border-white/10 p-6 rounded-3xl">
+            <h3 class="text-2xl font-bold text-pink-400 mb-2">Happy Kids</h3>
+            <a href="https://happy-ki.myshopify.com/" target="_blank" class="text-white hover:text-pink-400">View Site</a>
+        </div>
+        <div data-id="project-23" class="hidden group bg-slate-800/40 border border-white/10 p-6 rounded-3xl">
+            <h3 class="text-2xl font-bold text-blue-400 mb-2">Aiviq</h3>
+            <a href="https://www.aiviq.dk" target="_blank" class="text-white hover:text-blue-400">View Site</a>
+        </div>
+        <div data-id="project-24" class="hidden group bg-slate-800/40 border border-white/10 p-6 rounded-3xl">
+            <h3 class="text-2xl font-bold text-green-400 mb-2">Vireta</h3>
+            <a href="https://www.viretta.dk" target="_blank" class="text-white hover:text-green-400">View Site</a>
+        </div>
+      </div>
+
+      <div class="text-center mt-16">
+        <button id="show-more-projects-btn" class="px-10 py-4 bg-slate-800 hover:bg-slate-700 border border-white/20 rounded-full font-bold transition-all inline-flex items-center">
+          <i data-lucide="plus-circle" class="mr-2"></i> Show More Projects
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 px-4">
+    <div class="max-w-4xl mx-auto bg-slate-800/50 p-8 md:p-12 rounded-[2rem] border border-white/10">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">Start a Project</h2>
+        <p class="text-gray-400">Currently accepting new Shopify and React projects.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="space-y-8">
+            <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-blue-500/20 rounded-2xl flex items-center justify-center text-blue-400">
+                    <i data-lucide="mail"></i>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-500">Email</p>
+                    <a href="mailto:jayasharma5372@gmail.com" class="font-bold hover:text-blue-400">jayasharma5372@gmail.com</a>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-purple-500/20 rounded-2xl flex items-center justify-center text-purple-400">
+                    <i data-lucide="phone"></i>
+                </div>
+                <div>
+                    <p class="text-sm text-gray-500">Phone</p>
+                    <a href="tel:+917990766580" class="font-bold hover:text-purple-400">+91 7990766580</a>
+                </div>
+            </div>
+            <div class="flex space-x-4 pt-4">
+                <a href="https://www.linkedin.com/in/jaya-sharma-9954aa277" class="p-3 bg-white/5 hover:bg-white/10 rounded-xl transition-all"><i data-lucide="linkedin"></i></a>
+                <a href="https://github.com/jayasharma5372" class="p-3 bg-white/5 hover:bg-white/10 rounded-xl transition-all"><i data-lucide="github"></i></a>
+            </div>
+        </div>
+
+        <!-- REAL CONTACT FORM -->
+        <form id="contact-form" action="https://formspree.io/f/mkopavqr" method="POST" class="space-y-4">
+            <input type="text" name="name" required placeholder="Your Name" class="w-full bg-slate-900 border border-white/10 p-4 rounded-xl focus:border-blue-500 outline-none">
+            <input type="email" name="email" required placeholder="Email Address" class="w-full bg-slate-900 border border-white/10 p-4 rounded-xl focus:border-blue-500 outline-none">
+            <textarea name="message" required placeholder="Tell me about your project..." rows="4" class="w-full bg-slate-900 border border-white/10 p-4 rounded-xl focus:border-blue-500 outline-none"></textarea>
+            
+            <button type="submit" id="submit-btn" class="w-full py-4 bg-blue-600 hover:bg-blue-700 rounded-xl font-bold transition-all shadow-lg flex items-center justify-center">
+                <span id="btn-text">Send Message</span>
+            </button>
+            
+            <!-- This div shows the status (Success/Error) -->
+            <div id="form-status" class="hidden text-sm mt-4 p-3 rounded-lg text-center font-bold"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container" data-source="components/footer.html"></div>
+
+  <script type="module">
+    import { loadComponent } from './scripts/components/loader.js';
+    import { initContactForm } from './scripts/contact-form.js';
+    import { initScrollAnimations } from './scripts/animations.js';
+    import { initProjectVisibility } from './scripts/project-visibility.js';
+
+    loadComponent('#navbar-container');
+    loadComponent('#footer-container');
+
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      initContactForm();
+      initScrollAnimations();
+      initProjectVisibility();
     });
-}
+  </script>
+</body>
+</html>
