@@ -28,17 +28,17 @@ export function initContactForm() {
             });
 
             if (response.ok) {
-                // Success
+                // Success State
                 status.classList.replace('text-blue-400', 'text-green-400');
                 status.classList.replace('bg-blue-500/10', 'bg-green-500/20');
                 status.innerText = "Success! I will get back to you shortly.";
                 btnText.innerText = "Message Sent!";
-                form.reset(); 
+                form.reset(); // Clear the form fields
             } else {
                 throw new Error();
             }
         } catch (error) {
-            // Error
+            // Error State
             status.classList.replace('text-blue-400', 'text-red-400');
             status.classList.replace('bg-blue-500/10', 'bg-red-500/20');
             status.innerText = "Oops! There was a problem. Please try again.";
