@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jaya Sharma | Senior Shopify Plus Architect & Frontend Developer</title>
+  <title>Jaya Sharma | Senior Shopify Plus Architect</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -26,188 +26,107 @@
   </script>
   <style>
     .glass-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
-    .text-gradient { background: linear-gradient(to right, #60a5fa, #a78bfa, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-icon { @apply p-2 rounded-xl bg-white/5 border border-white/10 hover:bg-blue-600 hover:text-white transition-all duration-300; }
   </style>
 </head>
 <body class="bg-[#030712] text-white font-sofia overflow-x-hidden">
 
-  <!-- Navigation -->
+  <!-- NAVIGATION WITH ICONS -->
   <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-[#030712]/80 backdrop-blur-md border-b border-white/5">
     <div class="text-2xl font-black tracking-tighter">JAYA<span class="text-blue-500 text-3xl">.</span></div>
-    <div class="flex items-center space-x-6">
-        <a href="https://github.com/jayasharma5372" target="_blank" class="hover:text-blue-400 transition-colors"><i data-lucide="github" class="w-5"></i></a>
-        <a href="https://www.linkedin.com/in/jaya-sharma-9954aa277" target="_blank" class="hover:text-blue-400 transition-colors"><i data-lucide="linkedin" class="w-5"></i></a>
-        <a href="#contact" class="bg-blue-600 px-5 py-2 rounded-full font-bold text-sm hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/20">Hire Me</a>
+    
+    <div class="flex items-center space-x-4">
+        <!-- Social Icons in Nav -->
+        <a href="https://github.com/jayasharma5372" target="_blank" class="nav-icon" title="GitHub">
+            <i data-lucide="github" class="w-5 h-5"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/jaya-sharma-9954aa277" target="_blank" class="nav-icon" title="LinkedIn">
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+        <a href="#contact" class="hidden md:block bg-blue-600 px-6 py-2 rounded-full font-bold text-sm hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/20">
+            Hire Me
+        </a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
-    <div class="absolute inset-0 z-0">
-        <div class="absolute top-1/4 -left-10 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px] animate-float"></div>
-        <div class="absolute bottom-1/4 -right-10 w-96 h-96 bg-purple-600/20 rounded-full blur-[120px] animate-float" style="animation-delay: 3s"></div>
-    </div>
-
+  <!-- HERO SECTION WITH SOCIAL PROOF -->
+  <section class="min-h-screen flex items-center justify-center px-4 relative">
     <div class="max-w-5xl mx-auto text-center relative z-10">
-      <h1 class="text-6xl md:text-9xl font-black mb-6 animate-slide-up tracking-tighter leading-[0.9]">
-        High-Performance <span class="text-gradient">Shopify Stores.</span>
+      <h1 class="text-6xl md:text-8xl font-black mb-6 animate-slide-up tracking-tighter leading-none">
+        Shopify <span class="text-blue-500">Expert.</span><br>Frontend Architect.
       </h1>
       
-      <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed animate-slide-up" style="animation-delay: 0.2s;">
-        I transform complex <span class="text-white font-bold">Figma designs</span> into pixel-perfect <span class="text-white font-bold">Shopify Plus</span> experiences for luxury global brands.
+      <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto animate-slide-up" style="animation-delay: 0.2s;">
+        Specializing in high-conversion Shopify Plus stores for luxury brands. 
+        I bridge the gap between design and scalable code.
       </p>
       
       <div class="flex flex-wrap gap-4 justify-center animate-slide-up" style="animation-delay: 0.4s;">
-        <a href="#projects" class="px-10 py-5 bg-white text-black hover:bg-gray-200 rounded-2xl font-black transition-all flex items-center">
-            View Case Studies <i data-lucide="arrow-down-right" class="ml-2 w-5"></i>
+        <a href="#projects" class="px-10 py-5 bg-white text-black hover:bg-blue-600 hover:text-white rounded-2xl font-black transition-all flex items-center group">
+            Explore Work <i data-lucide="arrow-right" class="ml-2 group-hover:translate-x-1 transition-transform"></i>
         </a>
-        <a href="https://www.linkedin.com/in/jaya-sharma-9954aa277" target="_blank" class="px-10 py-5 glass-card rounded-2xl font-bold flex items-center hover:bg-white/5">
-            LinkedIn Profile
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Highlights Section -->
-  <section id="projects" class="py-32 px-4 border-t border-white/5">
-    <div class="max-w-7xl mx-auto">
-      <div class="flex flex-col md:flex-row justify-between items-end mb-20">
-        <div>
-            <h2 class="text-5xl font-black mb-4 tracking-tight">The Portfolio</h2>
-            <p class="text-gray-500 text-lg">Specialized builds for Beauty, Fashion, and Science-backed brands.</p>
-        </div>
-        <div class="text-blue-500 font-bold tracking-widest text-xs uppercase mt-4">20+ Stores Successfully Launched</div>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
         
-        <!-- PROJECT 1: HATCH -->
-        <div class="group glass-card rounded-[2.5rem] overflow-hidden hover:border-blue-500/50 transition-all">
-            <div class="p-10">
-                <div class="flex justify-between items-start mb-6">
-                    <h3 class="text-3xl font-black">Hatch Collection</h3>
-                    <span class="text-[10px] font-black bg-white/10 px-3 py-1 rounded-full uppercase tracking-widest">Shopify Plus</span>
-                </div>
-                <p class="text-gray-400 mb-8 text-lg leading-relaxed">Luxury maternity wear. Engineered custom product builders and advanced variant logic to handle complex stock requirements.</p>
-                <div class="flex gap-4 mb-8">
-                    <div class="bg-blue-500/10 px-4 py-2 rounded-xl text-blue-400 text-xs font-bold">Custom Liquid</div>
-                    <div class="bg-purple-500/10 px-4 py-2 rounded-xl text-purple-400 text-xs font-bold">UX Optimization</div>
-                </div>
-                <a href="https://www.hatchcollection.com/" target="_blank" class="inline-flex items-center text-white font-bold border-b-2 border-blue-500 pb-1 hover:text-blue-400 transition-colors">
-                    Visit Live Store <i data-lucide="external-link" class="ml-2 w-4"></i>
-                </a>
-            </div>
-        </div>
-
-        <!-- PROJECT 2: LIVE TINTED -->
-        <div class="group glass-card rounded-[2.5rem] overflow-hidden hover:border-orange-500/50 transition-all">
-            <div class="p-10">
-                <div class="flex justify-between items-start mb-6">
-                    <h3 class="text-3xl font-black">Live Tinted</h3>
-                    <span class="text-[10px] font-black bg-white/10 px-3 py-1 rounded-full uppercase tracking-widest">Beauty / UI Design</span>
-                </div>
-                <p class="text-gray-400 mb-8 text-lg leading-relaxed">Inclusive beauty brand. Developed high-conversion custom sections and a mobile-first UI focused on community and skin-tone matching.</p>
-                <div class="flex gap-4 mb-8">
-                    <div class="bg-orange-500/10 px-4 py-2 rounded-xl text-orange-400 text-xs font-bold">Custom Theme</div>
-                    <div class="bg-yellow-500/10 px-4 py-2 rounded-xl text-yellow-400 text-xs font-bold">Speed Optimized</div>
-                </div>
-                <a href="https://www.livetinted.com/" target="_blank" class="inline-flex items-center text-white font-bold border-b-2 border-orange-500 pb-1 hover:text-orange-400 transition-colors">
-                    Visit Live Store <i data-lucide="external-link" class="ml-2 w-4"></i>
-                </a>
-            </div>
-        </div>
-
-        <!-- GRID OF OTHER PREMIUM LINKS -->
-        <div class="md:col-span-2 grid md:grid-cols-3 gap-6 mt-12">
-            <!-- Irene Forte -->
-            <a href="https://ireneforteskincare.com/" target="_blank" class="glass-card p-8 rounded-3xl hover:bg-white/5 transition-all">
-                <h4 class="font-bold text-xl mb-2">Irene Forte</h4>
-                <p class="text-gray-500 text-sm mb-4">High-end skincare with subscription-first logic.</p>
-                <span class="text-blue-500 text-xs font-black uppercase">View Project →</span>
-            </a>
-            <!-- Eighth Day -->
-            <a href="https://eighthdayskin.com/" target="_blank" class="glass-card p-8 rounded-3xl hover:bg-white/5 transition-all">
-                <h4 class="font-bold text-xl mb-2">Eighth Day Skin</h4>
-                <p class="text-gray-500 text-sm mb-4">Performance-driven, science-backed skincare.</p>
-                <span class="text-blue-500 text-xs font-black uppercase">View Project →</span>
-            </a>
-            <!-- Velvet Tees -->
-            <a href="https://velvet-tees.com/" target="_blank" class="glass-card p-8 rounded-3xl hover:bg-white/5 transition-all">
-                <h4 class="font-bold text-xl mb-2">Velvet Tees</h4>
-                <p class="text-gray-500 text-sm mb-4">Modern apparel with a focus on minimalist UX.</p>
-                <span class="text-blue-500 text-xs font-black uppercase">View Project →</span>
-            </a>
-            <!-- By Johnny -->
-            <a href="https://byjohnny.com.au/" target="_blank" class="glass-card p-8 rounded-3xl hover:bg-white/5 transition-all">
-                <h4 class="font-bold text-xl mb-2">By Johnny</h4>
-                <p class="text-gray-500 text-sm mb-4">Premium Australian fashion house build.</p>
-                <span class="text-blue-500 text-xs font-black uppercase">View Project →</span>
-            </a>
-            <!-- Viretta -->
-            <a href="https://www.viretta.dk/" target="_blank" class="glass-card p-8 rounded-3xl hover:bg-white/5 transition-all">
-                <h4 class="font-bold text-xl mb-2">Viretta</h4>
-                <p class="text-gray-500 text-sm mb-4">Nordic-inspired clean Shopify experience.</p>
-                <span class="text-blue-500 text-xs font-black uppercase">View Project →</span>
-            </a>
-            <!-- Aiviq -->
-            <a href="https://www.aiviq.dk/" target="_blank" class="glass-card p-8 rounded-3xl hover:bg-white/5 transition-all">
-                <h4 class="font-bold text-xl mb-2">Aiviq</h4>
-                <p class="text-gray-500 text-sm mb-4">Responsive tech-gadget storefront.</p>
-                <span class="text-blue-500 text-xs font-black uppercase">View Project →</span>
-            </a>
-        </div>
+        <!-- Large Social Buttons -->
+        <a href="https://github.com/jayasharma5372" target="_blank" class="px-6 py-5 glass-card rounded-2xl hover:bg-white/10 transition-all flex items-center">
+            <i data-lucide="github" class="mr-2"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/jaya-sharma-9954aa277" target="_blank" class="px-6 py-5 glass-card rounded-2xl hover:bg-white/10 transition-all flex items-center">
+            <i data-lucide="linkedin" class="mr-2 text-blue-400"></i> LinkedIn
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Specialization Section -->
-  <section class="py-24 bg-blue-600 text-white px-4">
-    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-center md:text-left">
-        <div>
-            <h3 class="text-4xl font-black mb-4 leading-tight">Expertise in Conversion.</h3>
-            <p class="text-blue-100">I don't just write code; I build business assets that grow revenue.</p>
-        </div>
-        <div class="space-y-4">
-            <h4 class="font-black text-2xl uppercase tracking-tighter">Figma to Storefront</h4>
-            <p class="text-blue-100 text-sm">I bridge the gap between design and development, ensuring 100% fidelity to the original vision.</p>
-        </div>
-        <div class="space-y-4">
-            <h4 class="font-black text-2xl uppercase tracking-tighter">Liquid & Schema</h4>
-            <p class="text-blue-100 text-sm">Expert in custom Shopify sections, blocks, and meta-object architecture for scale.</p>
+  <!-- PROJECTS HIGHLIGHTS -->
+  <section id="projects" class="py-24 px-6 border-t border-white/5">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-black mb-16 tracking-tighter uppercase">Featured Case Studies</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project Example -->
+            <a href="https://www.hatchcollection.com/" target="_blank" class="group glass-card p-8 rounded-[2rem] hover:border-blue-500/50 transition-all">
+                <div class="flex justify-between mb-6">
+                    <div class="p-3 bg-blue-500/10 rounded-2xl text-blue-500"><i data-lucide="shopping-bag"></i></div>
+                    <i data-lucide="external-link" class="text-gray-600 group-hover:text-white transition-colors"></i>
+                </div>
+                <h3 class="text-2xl font-black mb-2">Hatch Collection</h3>
+                <p class="text-gray-400 text-sm mb-6 leading-relaxed">Shopify Plus development for a luxury maternity brand. Custom variant logic and UI components.</p>
+                <div class="flex gap-2">
+                    <span class="text-[10px] font-bold bg-white/5 px-3 py-1 rounded-full uppercase tracking-widest text-gray-500">Liquid</span>
+                    <span class="text-[10px] font-bold bg-white/5 px-3 py-1 rounded-full uppercase tracking-widest text-gray-500">UX Architect</span>
+                </div>
+            </a>
+            <!-- Add more project cards following this structure -->
         </div>
     </div>
   </section>
 
-  <!-- Final Contact Section -->
-  <section id="contact" class="py-32 px-4 relative">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-5xl md:text-7xl font-black mb-8 tracking-tighter">Let's build <br><span class="text-blue-500">something iconic.</span></h2>
+  <!-- CONTACT SECTION WITH ICONS -->
+  <section id="contact" class="py-32 px-6 bg-blue-600 text-white rounded-[3rem] mx-4 mb-10">
+    <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-5xl md:text-7xl font-black mb-8 tracking-tighter">Let's Connect.</h2>
         
         <div class="flex flex-wrap justify-center gap-6 mb-16">
-            <a href="mailto:jayasharma5372@gmail.com" class="flex items-center text-xl font-bold bg-white text-black px-8 py-4 rounded-2xl hover:scale-105 transition-all">
-                <i data-lucide="mail" class="mr-3"></i> jayasharma5372@gmail.com
+            <a href="mailto:jayasharma5372@gmail.com" class="flex items-center text-xl font-bold bg-white text-black px-8 py-5 rounded-2xl hover:scale-105 transition-all shadow-xl">
+                <i data-lucide="mail" class="mr-3"></i> Email Me
             </a>
-            <a href="tel:+917990766580" class="flex items-center text-xl font-bold glass-card px-8 py-4 rounded-2xl hover:bg-white/5 transition-all">
-                <i data-lucide="phone" class="mr-3"></i> +91 7990766580
-            </a>
+            
+            <!-- Large Icons for Footer -->
+            <div class="flex space-x-4">
+                <a href="https://github.com/jayasharma5372" target="_blank" class="p-5 bg-black/20 hover:bg-black/40 rounded-2xl transition-all border border-white/10" title="Visit GitHub">
+                    <i data-lucide="github" class="w-8 h-8"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/jaya-sharma-9954aa277" target="_blank" class="p-5 bg-black/20 hover:bg-black/40 rounded-2xl transition-all border border-white/10" title="Visit LinkedIn">
+                    <i data-lucide="linkedin" class="w-8 h-8"></i>
+                </a>
+            </div>
         </div>
 
-        <div class="flex justify-center space-x-8">
-            <a href="https://github.com/jayasharma5372" target="_blank" class="flex items-center text-gray-400 hover:text-white transition-all font-bold">
-                <i data-lucide="github" class="mr-2"></i> GitHub Profile
-            </a>
-            <a href="https://www.linkedin.com/in/jaya-sharma-9954aa277" target="_blank" class="flex items-center text-gray-400 hover:text-white transition-all font-bold">
-                <i data-lucide="linkedin" class="mr-2"></i> LinkedIn Profile
-            </a>
-        </div>
+        <p class="text-blue-100 font-bold opacity-70">© 2024 Jaya Sharma — Based in India, Working Globally.</p>
     </div>
   </section>
 
-  <footer class="py-12 border-t border-white/5 text-center text-gray-600 text-sm">
-    &copy; <script>document.write(new Date().getFullYear())</script> Jaya Sharma. Handcrafted for the Shopify Ecosystem.
-  </footer>
-
   <script>
+    // Initialize icons
     document.addEventListener('DOMContentLoaded', () => {
       lucide.createIcons();
     });
