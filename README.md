@@ -1,12 +1,43 @@
 # Jaya Sharma | Frontend & Shopify Developer
 
-Personal portfolio for Jaya Sharma, a Frontend and Shopify Developer with 2 years of professional experience.
+Personal portfolio for Jaya Sharma, Frontend & Shopify Developer based in Ahmedabad, Gujarat, India.
 
-## Stack
-HTML5 · CSS3 · JavaScript · Shopify Liquid · Tailwind CSS · SCSS · LESS · Bootstrap
+## Profile
+
+- 2+ years of professional frontend development experience
+- 20+ eCommerce storefronts contributed to
+- Current role: Frontend Developer at Atharva System
+- Experience with Shopify Liquid, JavaScript, HTML, CSS, SCSS, LESS, Tailwind CSS and responsive eCommerce development
+
+## Featured work
+
+- Suzie Kondi: custom Shopify theme development, 25% faster homepage
+- Velvet Tees: SEO health score improved by 40%
+- Irene Forte Skincare: reusable Liquid sections, 30% less development time
+- The Map Store: Splide.js sliders, AJAX Cart and storefront fixes
+- Live Tinted
+- BY JOHNNY
+- Eighth Day Skin
+- HATCH Collection
+- Viretta
+- AIVIQ
+- Jet Set Candy
+- Naked Cashmere
+- TopTier Attachments
+- Cambrook
+
+## Education
+
+- MCA, Shri Chimanbhai Patel Post Graduate Institute of Computer Application, 2022–2024, CGPA 9.09
+- BCA, P D Pandya Institute of Computer Applications, 2019–2022, CGPA 7.80
+
+## Tech
+
+HTML5, CSS3, JavaScript ES6+, Tailwind CSS, SCSS, LESS, Bootstrap, Shopify Liquid, Shopify 2.0, React, Webflow, Wix, WordPress, BigCommerce, Git, GitHub, VS Code, Figma, Adobe Photoshop, MySQL and SQL.
 
 ## Contact
-jayasharma5372@gmail.com
 
-## Portfolio
-https://jayasharma5372.github.io/portfolio/
+Email: jayasharma5372@gmail.com
+
+Portfolio: https://jayasharma5372.github.io/portfolio/
+GitHub: https://github.com/jayasharma5372
