@@ -787,19 +787,25 @@ section[id] {
   margin: 0;
 }
 .skill-list,
-.skills-list {
+.skills-list,
+.chips,
+.chip-cloud {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
+  margin-top: 10px;
 }
 .skill-list span,
-.skills-list span {
-  font-size: 10px;
+.skills-list span,
+.chips b,
+.chip-cloud span {
+  font-size: 11px;
   color: var(--muted);
-  border: 1px solid var(--line);
-  padding: 6px 9px;
+  border: 1px solid var(--line-strong);
+  padding: 6px 10px;
   border-radius: 999px;
-  background: var(--bg);
+  background: var(--surface);
+  font-weight: 500;
 }
 .education-grid {
   display: grid;
@@ -868,6 +874,15 @@ section[id] {
   background: var(--ink);
   color: #fff;
   transform: translateY(-2px);
+}
+.contact-links a.button-dark {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+.contact-links a.button-dark:hover {
+  background: var(--accent);
+  border-color: var(--accent);
 }
 .resume-section {
   padding-bottom: 120px;
